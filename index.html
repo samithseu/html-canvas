@@ -2,28 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Seu Samith" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Particles - HTML Canvas" />
+    <meta
+      property="og:description"
+      content="Particles background created using HTML canvas API"
+    />
+    <meta
+      name="description"
+      content="Particles background created using HTML canvas API"
+    />
+    <meta property="og:image" content="sample.png" />
     <title>Particles - HTML Canvas</title>
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
-    <style type="text/css">
-      /* reset styles */
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      html {
-        color-scheme: dark light;
-      }
-      body {
-        overflow: hidden;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
+      <!-- content -->
+      <div class="content">
+        <h1>Particlces Background</h1>
+      </div>
+
+      <!-- particles background - canvas -->
       <canvas id="canvas"></canvas>
     </div>
-    <script src="canvas.js"></script>
   </body>
 </html>
