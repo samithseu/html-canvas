@@ -4,7 +4,6 @@ let displayWidth = window.innerWidth;
 let displayHeight = window.innerHeight;
 canvas.style.width = `${displayWidth}px`;
 canvas.style.height = `${displayHeight}px`;
-
 canvas.width = displayWidth;
 canvas.height = displayHeight;
 
@@ -45,11 +44,11 @@ let circles = [];
 
 // adding each circle into the array
 for (let i = 0; i < 100; i++) {
-  let x = Math.random() * displayWidth;
-  let y = Math.random() * displayHeight;
+  let radius = 2;
+  let x = Math.random() * (displayWidth - radius * 2) + radius;
+  let y = Math.random() * (displayHeight - radius * 2) + radius;
   let dx = Math.random() * 2;
   let dy = Math.random() * 2;
-  let radius = 2;
   circles.push(
     new Circle(
       x,
@@ -57,9 +56,10 @@ for (let i = 0; i < 100; i++) {
       dx,
       dy,
       radius,
-      `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
-        Math.random() * 255
-      })`
+      "white"
+      // `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${
+      //   Math.random() * 255
+      // })`
     )
   );
 }
